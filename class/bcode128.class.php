@@ -256,7 +256,9 @@ class bcode128 {
 			  imagegif($img,$this->out_file);
 			  break;
 		}
-		imagedestroy($img);
+		header("Content-Type: image/png"); 
+		  ImagePNG($img); 
+		// imagedestroy($img);
 		return true;
 	}
 
